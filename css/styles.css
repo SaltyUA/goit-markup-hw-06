@@ -771,6 +771,7 @@ img {
   position: relative;
   margin-top: 4px;
 }
+
 .modal-input {
   width: 100%;
   padding-left: 38px;
@@ -798,13 +799,10 @@ img {
   fill: var(--primary-brand-color);
 }
 
-.modal-comment {
-}
-
-.modal-btn {
-}
-
 .modal-textarea {
+}
+
+.modal-comment {
   margin-top: 4px;
   padding: 8px 16px;
   display: block;
@@ -817,26 +815,27 @@ img {
   transition: border-color 250ms var(--cubic);
 }
 
-.modal-textarea:focus {
+.modal-comment:focus {
   border-color: var(--primary-brand-color);
 }
 
-.modal-textarea::placeholder {
+.modal-comment::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
 
-.privacy-text {
-  display: flex;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--subtle-text-color);
+.modal-checkbox {
+  margin-top: 16px;
 }
 
-.privacy-text span {
+.privacy-label {
+  display: flex;
+  align-items: center;
+}
+
+.privacy-check {
   width: 16px;
   height: 16px;
   border: 1px solid var(--dark-color);
@@ -850,28 +849,41 @@ img {
     fill 250ms var(--cubic);
 }
 
-.modal-privacy:checked + .privacy-text span {
+.modal-privacy:focus + .privacy-label .privacy-check {
+  border-color: var(--pressed-state-color);
+}
+
+.modal-privacy:checked + .privacy-label .privacy-check {
   background-color: var(--pressed-state-color);
   border: transparent;
   fill: var(--light-color);
 }
 
-.modal-checkbox {
-  margin-top: 16px;
+.privacy-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.privacy-link {
+  color: var(--primary-brand-color);
+  padding-left: 0.08em;
+}
+
+.modal-btn {
   display: flex;
-  align-items: center;
+  padding: 16px 32px;
+  background-color: #4d5ae5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--white-background-color);
+  border-width: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
 }
-
-/* .privacy-text::before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  border: 1px solid var(--dark-color);
-  border-radius: 2px;
-  margin-right: 8px;
-}
-
-.modal-privacy:checked + .privacy-text::before {
-  background-color: var(--pressed-state-color);
-  border: transparent;
-} */
